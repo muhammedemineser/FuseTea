@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Comic";
+  src: url("fonts/RifficFree-Bold.ttf") format("opentype");
+}
+
+
+body {
+    width: 90%;
+    height: 90%;
+    background-color: aliceblue;
+}
+
+:root {
+    --borderRadius: 15px;
+    --border: 10px;
+}
+
+.cartoonContainer {
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20%;
+    left: 50%;
+}
+
+.cartoonContainer > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 30vh;
+    border: var(--border) solid black;
+    border-radius: var(--borderRadius);
+    font-size: 1rem;
+    font-family: "Comic", sans-serif;
+    margin: 5%;
+}
+
+.textPicCartoon {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    border: var(--border) solid black;
+    border-radius: var(--borderRadius);
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 1%;
+    margin: 1%;
+}
+
+.cartoonBilder img {
+    display: flex;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: 3%;
+    justify-content: center;
+}
