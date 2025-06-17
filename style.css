@@ -5,8 +5,9 @@
 
 
 body {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     background-color: aliceblue;
 }
 
@@ -18,13 +19,11 @@ body {
 .cartoonContainer {
     justify-content: center;
     align-items: center;
-    width: 80vw;
+    width: 100vw;
     height: fit-content;
-    border: 2px solid black;
-    border-radius: var(--borderRadius);
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 20%;
     left: 50%;
 }
@@ -33,33 +32,65 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    width: 100vw;
     height: 30vh;
-    border: var(--border) solid black;
     border-radius: var(--borderRadius);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: "Comic", sans-serif;
-    margin: 5%;
+    flex-shrink: 1;
 }
+
+
 
 .textPicCartoon {
     display: flex;
     flex-direction: row;
     height: 90%;
-    border: var(--border) solid black;
-    border-radius: var(--borderRadius);
-    margin: 10%;
+    width: 90%;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 1%;
+    letter-spacing: 2px;
     margin: 1%;
+    overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
+    word-wrap: break-word;     /* Fallback für ältere Browser */
+    overflow: hidden;          /* Verhindert, dass etwas überläuft */
+    background-color: white;
+    margin-top: 3px;
+    box-shadow: 15px 15px #d0e8ff;
+}
+
+span.animation {
+  animation-name: cartoonCards;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cartoonCards {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cartoonText {
+    display: flex;
+    padding: 10%;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
+    word-wrap: break-word;     /* Fallback für ältere Browser */
+    overflow: hidden;          /* Verhindert, dass etwas überläuft */
 }
 
 .cartoonBilder img {
     display: flex;
     max-height: 100%;
-    margin-left: auto;
-    margin-right: 3%;
+    margin-right: auto;
+    margin-left: 3%;
     justify-content: center;
 }
