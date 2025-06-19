@@ -163,7 +163,10 @@ body {
     overflow: hidden;          /* Verhindert, dass etwas überläuft */
     background-color: white;
     margin-top: 3px;
-    animation: containerShadow 0.3s ease 0.3s 1 normal forwards;
+}
+
+.textPicCartoon.animate-shadow {
+    animation: containerShadow 0.3s ease forwards;
 }
 
 @keyframes containerShadow {
@@ -209,4 +212,15 @@ span.animation {
     max-height: 15rem;
     margin-right: auto;
     justify-content: center;
+}
+
+.cartoonBilder {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cartoonBilder.show {
+    opacity: 1;
+    transform: translateY(0);
 }
