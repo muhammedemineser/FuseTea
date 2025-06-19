@@ -3,6 +3,21 @@
   src: url("fonts/RifficFree-Bold.ttf") format("opentype");
 }
 
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "montserratItalic";
+  src: url("fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fredoka";
+  src: url("fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf") format("truetype");
+}
 
 body {
     width: 100%;
@@ -12,8 +27,99 @@ body {
 }
 
 :root {
-    --borderRadius: 15px;
-    --border: 10px;
+    --grey: #b4b0bd;
+}
+
+#ueberschrift {
+  font-family: "montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+
+#projectGoal {
+  display: flex;
+  align-items: center;
+  color: var(--grey);
+  width: 90vw;
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  margin: 8% 10% 2% 10%;
+}
+
+#projectDescription {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  height: 10vh;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  font-family: "montserrat", sans-serif;
+  margin: 0px 10% 10% 10%;
+}
+
+#meineTools {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  color: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.toolSet {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.toolGrid {
+  margin-bottom: 10%;
+}
+
+
+.label {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+    display: flex;
+  flex-direction: row;  
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolItem {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.toolSet img {
+  width: 7rem;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+
+#shortBackstory {
+  font-family: "fredoka", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: lightblue;
+  text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  position: relative;
+  left: 10%;
 }
 
 .cartoonContainer {
@@ -57,12 +163,25 @@ body {
     overflow: hidden;          /* Verhindert, dass etwas überläuft */
     background-color: white;
     margin-top: 3px;
+    animation: containerShadow 0.3s ease 0.3s 1 normal forwards;
+}
+
+@keyframes containerShadow {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  }
+  100% {
     box-shadow: 15px 15px #d0e8ff;
+  }
+}
+
+span {
+  display: inline-block;
 }
 
 span.animation {
   animation-name: cartoonCards;
-  animation-duration: 0.1s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -78,19 +197,16 @@ span.animation {
 }
 
 .cartoonText {
-    display: flex;
-    padding: 10%;
-    align-items: center;
-    justify-content: center;
-    overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
-    word-wrap: break-word;     /* Fallback für ältere Browser */
-    overflow: hidden;          /* Verhindert, dass etwas überläuft */
+  display: block; /* statt flex */
+  padding: 10%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; /* ← behält Zeilenumbrüche! */
+  line-height: 1.5;
 }
 
-.cartoonBilder img {
+.cartoonBilder img, #iconYasar {
     display: flex;
-    max-height: 100%;
+    max-height: 15rem;
     margin-right: auto;
-    margin-left: 3%;
     justify-content: center;
 }
