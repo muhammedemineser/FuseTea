@@ -21,13 +21,13 @@
 
 html {
   scroll-behavior: smooth;
-  width: 90%;
-  max-width: 90%;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     background-color: aliceblue;
     overflow-x: hidden;
