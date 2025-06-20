@@ -32,7 +32,6 @@ body {
     background-color: aliceblue;
     overflow-x: hidden;
 }
-
 :root {
     --grey: #b4b0bd;
 }
@@ -42,6 +41,7 @@ body {
   font-size: 2.5rem;
   font-weight: 500;
   margin: 50px;
+  margin-left: 18%;
 }
 
 
@@ -169,7 +169,7 @@ h2 {
   text-decoration: none;
   gap: 0.5rem;
   margin-left: auto;
-  margin-right: 20%;
+  margin-right: 0;
   transition: 0.5s ease;
   font-size: 1.3rem;
 }
@@ -298,6 +298,37 @@ span.animation {
   margin: 3% 10% 3% 10%;
 }
 
+/* Overlay text on the skills background image */
+#skills-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#skills-section > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#skills-section > .rollen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4.7rem;
+  margin: 0% 5% -5rem 5%;
+  z-index: 1;
+  width: 90vw;
+}
+
 .processColumn {
   position: relative;
   display: grid;
@@ -325,6 +356,10 @@ span.animation {
 
 .item-row1 {
   grid-column: 1;
+}
+
+ul h3 {
+  min-height: 7.5rem;
 }
 
 .item-row2 {
