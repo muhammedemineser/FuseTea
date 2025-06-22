@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -12,11 +12,11 @@
     <body>
     <div id="headerContainer"></div>
         <main>
-            <div id="ueberschrift" style="text-align: center;">UX,UI Design in einem Softdrinks Onlineshop</div>
+            <div id="ueberschrift">UX,UI Design in einem Softdrinks Onlineshop</div>
             <!-- Cartoon -->
             <h1>Projektziel:</h1>
             <div id="projectDescription">
-                Eine ästhetische, benutzerzentrierte, inklusive Website für Getränkebestellungen<img src="media/yasarsDoseIcon.png" alt="icon des Unternehmens" id="iconYasar" style="display: inline-block;">
+                Eine ästhetische, benutzerzentrierte, inklusive Website für Getränkebestellungen<img src="/media/yasarsDoseIcon.png" alt="icon des Unternehmens" id="iconYasar" style="display: inline-block;">
             </div>
             <article>
                 <h2 id="meineTools">Meine Tools:</h2>
@@ -134,19 +134,19 @@
                         </div>
                     </section>
              </article>
-             <article>
-                <h1 style="margin-top: 20%;">Der Arbeitsprozess</h1>
-                <h2>Informationsarchitektur</h2>
+             <article id="IASection">
+                <h1 id="workProcess" style="margin-top: 20%;">Der Arbeitsprozess</h1>
+                <h2 id="IA" style="color: black; font-weight: 800;">Informationsarchitektur</h2>
                 <div class="processColumn">
-                    <div class="item-row1" style="grid-column:1/3; grid-row: 1 / 14; height:55rem; width: 85rem; background-image: url(media/vorher_nachher_wireframe.png); background-position: center; background-size: contain; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center;"></div>
-                    <section class="rollen" style="margin-left: 0; margin-top: 0;">
-                        <h1 style="margin-left: 5%; margin-top: 0;">Informationsarchitektur: Vorher vs. Nachher</h1>
-                        <h2 style="margin-left: 5%;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
+                    <div class="item-row1" style="grid-column:1/3; grid-row: 1 / 14; height:55rem; width: 85rem; background-image: url(/media/vorher_nachher_wireframe.png); background-position: center; background-size: contain; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center;"></div>
+                    <section class="rollen Sec" style="margin-left: 0; margin-top: 0;">
+                        <h1 style="margin-left: 0%; margin-top: 0; color: black; font-weight: 600;">Informationsarchitektur: Vorher vs. Nachher</h1>
+                        <h2 style="margin-left: 0%; color: black; font-weight: 600; font-size: 1.4rem;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-left: 7%;">
 
-                            <ul>
-                            <h3 style="min-height: 1rem;">Vorher</h3>
+                            <ul class="beforeAfterIA" >
+                            <h3 style="min-height: 1rem; color: black; font-weight: 600;">Vorher</h3>
                             <li>Kein Mobile-First Design</li>
                             <li>Überladung durch drei visuell überfordernde Kästen im Header</li>
                             <li>Unstrukturierte Inhaltsreihenfolge</li>
@@ -157,8 +157,8 @@
                             <li>Großflächige Grafik ohne funktionalen Mehrwert</li>
                             </ul>
 
-                            <ul>
-                            <h3 style="min-height: 1rem;">Nachher</h3>
+                            <ul class="beforeAfterIA" >
+                            <h3 style="min-height: 1rem; color: black; font-weight: 600;">Nachher</h3>
                             <li>Mobile-First Struktur: klare vertikale Nutzerführung</li>
                             <li>Reduktion auf das Wesentliche – kognitive Entlastung</li>
                             <li>Priorisierung: Wichtigstes zuerst – Top-Angebot & Top-Produkte</li>
@@ -170,20 +170,38 @@
                             </ul>
 
                         </div>
-
-                        <p><strong>UX-Grundlagen zur Entscheidung:</strong></p>
-                        <ul>
+                        <div id="evidence">
+                        <p style="color: black; font-weight: 600;"> <strong style="color: var(--grey);">UX-Grundlagen zur Entscheidung:</strong></p>
+                        <ul style="color: black; font-weight: 600;">
                             <li><em>Hick’s Law:</em> Weniger Auswahl beschleunigt Entscheidungen</li>
                             <li><em>Serial Position Effect:</em> Wichtiges gehört an den Anfang</li>
                             <li><em>Jakob’s Law:</em> Nutzer erwarten bekannte Muster – z. B. Produktübersicht direkt nach dem Header</li>
                             <li><em>Mobile-First Design:</em> Optimierung für die Hauptnutzungsplattform</li>
                             <li><em>Content Hierarchy:</em> Klar gegliedert = bessere Orientierung & Conversion</li>
                         </ul>
+                        </div>
                         </section>
-                    <div class="item-row1" background-position: center; background-size: contain; background-repeat: no-repeat;></div>
-                    <div class="item-row2" background-position: center; background-size: contain; background-repeat: no-repeat;></div>
-                    <div class="item-row1" background-position: center; background-size: contain; background-repeat: no-repeat;></div>
-                    <div class="item-row2" background-position: center; background-size: contain; background-repeat: no-repeat;></div>
+                                     <section class="produktbilder-section">                    
+                        <h1 id="workProcess" style="margin-top: 10%;">Der Arbeitsprozess</h1>
+                <h2 id="IA" style="color: black; font-weight: 800; margin: 0% 0 5% 0;">Produktbilder – Vorher vs. Nachher</h2>
+                    <img src="media/vergleich_produktbilder.png" alt="Red Bull neu" style="width:100%;grid-template-columns: 4/7; grid-template-rows: 15/29 ; ">                    
+                    <div>
+                        <p>
+                            Die ursprünglichen Produktbilder vermittelten weder Professionalität noch die angestrebte Markenidentität: Sie waren unscharf, uneinheitlich in Format und Ausrichtung, teils pixelig und wirkten alles andere als „exotisch“. Um die UX zu verbessern, das Vertrauen der Nutzer:innen zu stärken und die Conversion-Rate zu erhöhen, habe ich folgende Maßnahmen ergriffen:
+                        </p>
+                        <ul>
+                            <li>Alle Bilder in <strong>Krita</strong> auf Ebenen übereinandergelegt → einheitliche Ausrichtung & Größe</li>
+                            <li>Für exotische Getränke stimmige, <strong>farblich abgestimmte Hintergründe</strong> erstellt</li>
+                            <li><strong>Dynamische Farbmodifikation</strong> & Invertierung bei Joozy-Drinks → „explosiver“, jugendlicher Stil (Zielgruppe: 19–35 Jahre)</li>
+                            <li>Produktbilder für Artikel-Detailseiten ohne Hintergrund → <strong>reduzierte Ablenkung & schnellere Kaufentscheidungen</strong></li>
+                            <li>Schärfere, hochwertigere Bilder für Chips & unscharfe Produkte verwendet</li>
+                        </ul>
+                        <h3>✨ Ergebnis: Konsistenz, Markenidentität & Benutzervertrauen</h3>
+                        <p>
+                            Meine grafischen Anpassungen bringen Struktur, Stil und Klarheit ins Sortiment. Alle Produkte wirken nun frisch, kühl, jung und hochwertig – so wie es sich für einen modernen Online-Shop gehört.
+                        </p>
+                    </div>
+                </section>
                 </div>
              </article>
         </main>
