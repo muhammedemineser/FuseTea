@@ -22,12 +22,10 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
-  max-width: 100%;
 }
 
 body {
     width: 100%;
-    max-width: 100%;
     margin: 0 auto;
     background-color: aliceblue;
     overflow-x: hidden;
@@ -37,11 +35,13 @@ body {
 }
 
 #ueberschrift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   margin: 50px;
-  margin-left: 18%;
 }
 
 
@@ -112,7 +112,6 @@ h2 {
   width: 100%;
   height: fit-content;
   margin: auto;
-  margin-left: 6%;
 }
 
 .toolGrid {
@@ -185,7 +184,7 @@ h2 {
   color: var(--grey);
   animation: skipper 1s linear infinite;
   will-change: transform;
-  margin-right: 13px;
+  margin-right: 10%;
 }
 
 @keyframes skipper {
@@ -201,24 +200,23 @@ h2 {
   }
 }
 
-
 .cartoonContainer {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
+    width: 100vw;
+    height: fit-content;
+    width: auto;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20%;
-    margin: 0 auto;
 }
 
 .cartoonContainer > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 30vh;
     border-radius: var(--borderRadius);
     font-size: 1.2rem;
@@ -292,11 +290,60 @@ span.animation {
 }
 
 .rollen {
+  display: flex;
+  flex-wrap:wrap;
   color: var(--grey);
   font-size: 1.8rem;
   font-weight: 600;
   font-family: "montserrat", sans-serif;
   margin: 3% 10% 3% 10%;
+}
+
+@media (max-width: 3000px) {
+  .rollen {
+  margin: 0 !important;
+  font-size: 1.2rem;
+  gap: 1rem !important;
+}
+
+  #workProcess {
+    margin-top: 40% !important;
+  }
+  .toolSet > .toolItem  {
+    display: flex !important;
+    flex-shrink: 8 !important;
+  }
+  #workProcess, #IA {
+    margin-left: 3% !important;
+  }
+  .processColumn {
+    margin-left: -3% !important;
+    flex-shrink: 3 !important;
+  }
+  .rollen.Sec :is(h1,h2) {
+    margin-left: 3% !important;
+  }
+  .rollen.Sec :is(ul, li) {
+    margin: 0 !important;
+  }
+  #evidence {
+    margin-top: 5% !important;
+  }
+  #evidence ul li {
+    all: unset !important;
+    gap: 10px !important;
+  }
+  #evidence p {
+    margin-left: 10% !important;
+    color: var(--grey) !important;
+  }
+}
+
+.rollen.Sec {
+  color: var(--grey);
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
 }
 
 /* Overlay text on the skills background image */
@@ -347,6 +394,12 @@ span.animation {
   margin-top: 10vh;
 }
 
+.beforeAfterIA li {
+  color: black;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
 .processColumn div {
   display: inline-block;
   border-radius: 30px;
@@ -367,3 +420,15 @@ ul h3 {
   grid-column: 2;
 }
 
+#IASection :is(div) {
+  width: fit-content;
+  height: fit-content;
+}
+
+.produktbilder-section {
+  display: flex;
+}
+
+#produktBilderVergleich * {
+  flex-wrap: wrap;
+}
