@@ -74,6 +74,38 @@ document.querySelectorAll(".cartoonText").forEach(e => {
     textObserver.observe(e);
 });
 
+const maps = document.querySelectorAll('.empathy-map');
+let current = 0;
+
+document.querySelector('.empathy-card').addEventListener('click', () => {
+  const currentMap = maps[current];
+  currentMap.classList.remove('active');
+  currentMap.classList.add('exit-left');
+
+  // Bestimme nächste Karte
+  const next = (current + 1) % maps.length;
+  const nextMap = maps[next];
+
+  // Setze Karte initial rechts außerhalb
+  nextMap.style.display = 'block';
+  nextMap.classList.remove('active', 'exit-left');
+  nextMap.classList.add('enter-right');
+
+  // Erzwinge Repaint + nächste Frame → dadurch greift Transition zuverlässig
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      nextMap.classList.remove('enter-right');
+      nextMap.classList.add('active');
+      current = next;
+    });
+  });
+
+  // Nach der Transition: vorherige Karte ausblenden & Klassen entfernen
+  setTimeout(() => {
+    currentMap.style.display = 'none';
+    currentMap.classList.remove('exit-left');
+  }, 600); // gleiche Dauer wie CSS-Transition
+});
 
 
 
