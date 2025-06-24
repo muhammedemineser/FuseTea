@@ -26,7 +26,6 @@ html {
 
 body {
     width: 100%;
-    margin: 0 auto;
     background-color: aliceblue;
     overflow-x: hidden;
 }
@@ -79,6 +78,14 @@ h2 {
   font-family: "montserrat", sans-serif;
   margin: 3% 10% 0% 10%;
   height: 7vh;
+}
+
+h4 {
+  display: inline-block;
+  color: var(--grey);
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
 }
 
 #projectDescription {
@@ -317,7 +324,7 @@ span.animation {
     margin-left: 3% !important;
   }
   .processColumn {
-    margin-left: -3% !important;
+    margin-left: -10% !important;
     flex-shrink: 3 !important;
   }
   .rollen.Sec :is(h1,h2) {
@@ -420,6 +427,10 @@ ul h3 {
   grid-column: 2;
 }
 
+#IASection {
+  margin-left: 7%;
+}
+
 #IASection :is(div) {
   width: fit-content;
   height: fit-content;
@@ -431,4 +442,69 @@ ul h3 {
 
 #produktBilderVergleich * {
   flex-wrap: wrap;
+}
+
+.productText * {
+  width: 90vw;
+}
+
+.productText h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 2.2rem;
+}
+
+.productText :is(p, ul li) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-height: 1rem; 
+  color: black;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  margin-left: 3%;
+}
+
+.productText ul {
+  margin-top: 5%;
+}
+
+#empathyCardContainer {
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  z-index: 1;
+}
+
+.empathy-map {
+  display: none;
+  width: 100%;
+  border-radius: 16px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.empathy-map.active {
+  display: block;
+  position: absolute;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.empathy-map.enter-right {
+  display: block;
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.empathy-map.exit-left {
+  display: block;
+  position: absolute;
+  transform: translateX(-100%);
+  opacity: 0;
 }
