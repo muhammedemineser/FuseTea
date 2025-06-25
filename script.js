@@ -76,22 +76,22 @@ document.querySelectorAll(".cartoonText").forEach(e => {
 
 const maps = document.querySelectorAll('.empathy-map');
 let current = 0;
+let clickLocked = false; // Sperrvariable
 
-document.querySelector('.empathy-card').addEventListener('click', () => {
+function switchMap(next) {
+  if (clickLocked) return; // Falls blockiert: abbrechen
+  clickLocked = true;
+
   const currentMap = maps[current];
+  const nextMap = maps[next];
+
   currentMap.classList.remove('active');
   currentMap.classList.add('exit-left');
 
-  // Bestimme nächste Karte
-  const next = (current + 1) % maps.length;
-  const nextMap = maps[next];
-
-  // Setze Karte initial rechts außerhalb
   nextMap.style.display = 'block';
-  nextMap.classList.remove('active', 'exit-left');
+  nextMap.classList.remove('active', 'exit-left', 'enter-right');
   nextMap.classList.add('enter-right');
 
-  // Erzwinge Repaint + nächste Frame → dadurch greift Transition zuverlässig
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       nextMap.classList.remove('enter-right');
@@ -100,11 +100,81 @@ document.querySelector('.empathy-card').addEventListener('click', () => {
     });
   });
 
-  // Nach der Transition: vorherige Karte ausblenden & Klassen entfernen
   setTimeout(() => {
     currentMap.style.display = 'none';
     currentMap.classList.remove('exit-left');
-  }, 600); // gleiche Dauer wie CSS-Transition
+    clickLocked = false; // Sperre wieder freigeben
+  }, 1000); // Dauer der Sperre (1 Sekunde)
+}
+
+// Klick auf Karte: weiter zur nächsten
+document.querySelector('.empathy-card').addEventListener('click', () => {
+  const next = (current + 1) % maps.length;
+  switchMap(next);
+});
+
+// Navigation via Buttons
+document.getElementById('prevEmpathy').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const prev = (current - 1 + maps.length) % maps.length;
+  switchMap(prev);
+});
+
+document.getElementById('nextEmpathy').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const next = (current + 1) % maps.length;
+  switchMap(next);
+});
+const visionMaps = document.querySelectorAll('.vision-map');
+let currentVision = 0;
+let visionClickLocked = false;
+
+function switchVisionMap(next) {
+  if (visionClickLocked) return;
+  visionClickLocked = true;
+
+  const currentMap = visionMaps[currentVision];
+  const nextMap = visionMaps[next];
+
+  currentMap.classList.remove('active');
+  currentMap.classList.add('exit-left');
+
+  nextMap.style.display = 'block';
+  nextMap.classList.remove('active', 'exit-left', 'enter-right');
+  nextMap.classList.add('enter-right');
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      nextMap.classList.remove('enter-right');
+      nextMap.classList.add('active');
+      currentVision = next;
+    });
+  });
+
+  setTimeout(() => {
+    currentMap.style.display = 'none';
+    currentMap.classList.remove('exit-left');
+    visionClickLocked = false;
+  }, 1000);
+}
+
+// Klick auf Karte
+document.querySelector('.vision-card').addEventListener('click', () => {
+  const next = (currentVision + 1) % visionMaps.length;
+  switchVisionMap(next);
+});
+
+// Navigation Buttons
+document.getElementById('prevVision').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const prev = (currentVision - 1 + visionMaps.length) % visionMaps.length;
+  switchVisionMap(prev);
+});
+
+document.getElementById('nextVision').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const next = (currentVision + 1) % visionMaps.length;
+  switchVisionMap(next);
 });
 
 
