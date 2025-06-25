@@ -9,7 +9,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
     </head>
-    <body>
     <div id="headerContainer"></div>
         <main>
             <div id="ueberschrift">UX,UI Design in einem Softdrinks Onlineshop</div>
@@ -135,8 +134,8 @@
                     </section>
              </article>
              <article id="IASection">
-                <h1 id="workProcess" style="margin-top: 20%;">Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
-                <h2 id="IA" style="color: black; font-weight: 800;">Informationsarchitektur</h2>
+                <h1 class="revertMargin" style="margin-top: 20vh !important;">Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
+                <h2 class="revertMargin" style="color: black; font-weight: 800;">Informationsarchitektur</h2>
                 <div class="processColumn">
                     <div class="item-row1" style="grid-column:1/3; grid-row: 1 / 14; height:55rem; width: 85rem; background-image: url(/media/vorher_nachher_wireframe.png); background-position: center; background-size: contain; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center;"></div>
                     <section class="rollen Sec" style="margin-left: 0; margin-top: 0;">
@@ -146,7 +145,7 @@
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-left: 7%;">
 
                             <ul class="beforeAfterIA" >
-                            <h3 style="min-height: 1rem; color: black; font-weight: 600;">Vorher</h3>
+                            <h3 style="min-height: 1rem; color: black; font-weight: 600; ">Vorher</h3>
                             <li>Kein Mobile-First Design</li>
                             <li>Überladung durch drei visuell überfordernde Kästen im Header</li>
                             <li>Unstrukturierte Inhaltsreihenfolge</li>
@@ -186,7 +185,7 @@
              <article>
                  <section id="productSection" style="margin-left: -5%;">  
                     <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-left: 7%; margin-top: -15%;">
-                        <h1 id="workProcess" style="margin-top: 0%;">Der Arbeitsprozess <span>&nbsp;  Ⅱ</span></h1>
+                        <h1 id="workProcess" style="margin-top: 0% !important;">Der Arbeitsprozess <span>&nbsp;  Ⅱ</span></h1>
                         <h2 id="IA" style="color: black; font-weight: 800;">Produktdarstellung und Anpassung auf Zielgruppe</h2>
                             <img src="media/vergleich_produktbilder.png" alt="Vergleich der Produktdarstellung vorher und nachher" style="width:100%;grid-template-columns: 1; grid-template-rows: 1; ">                    
                             <div class="productText">
@@ -241,8 +240,28 @@
                                     <h1 id="workProcess" style="margin-top: 0%; margin-left: 0%;">Der Arbeitsprozess <span>&nbsp;  Ⅲ</span></h1>
                     <h2 id="IA" style="color: black; font-weight: 800;">Empathiephase im UX-Designprozess – Beispiel & Analyse
                     </h2>
+                    <div id="empathyWrapper">
+                    <h3 style="margin-left:3% ;">UX-Rechercheergebnisse</h3>
+                    <ul>
+                        <li>Der Großteil der Benutzer ist zwischen 16 und 35 Jahre alt.</li>
+                        <li>Die Mehrheit der Benutzer hat einen ausländischen Hintergrund.</li>
+                        <li>Die Kunden des Start-ups sind überwiegend Endkonsument:innen.</li>
+                    </ul>
+                    </div>
                 <section id="empathyRedesign">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;"></div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;" id="empathyGrid">
+                    <img src="media/hmw.png" alt="HowMightWe" style="width: 100%;height:50%; aspect-ratio: 1/1; grid-template-columns: 1; grid-template-rows: 1; position: relative; top:10%;">
+                    <ul style="margin-right: 3%;">
+                    <li>Wie könnten wir visuelle Inhalte gestalten, die kulturell inklusiv wirken?</li>
+                    <li>Wie könnten wir Urlaubssymbole nutzen, ohne nationalistische Konnotationen?</li>
+                    <li>Wie lässt sich eine internationale Identität betonen, ohne bestimmte Gruppen auszuschließen?</li>
+                    <li>Wie können wir sofortige Wiedererkennbarkeit zwischen Bildsprache und Markenidentität herstellen?</li>
+                    <li>Wie schaffen wir visuelle Kongruenz über die gesamte Website hinweg?</li>
+                    <li>Wie fördern wir ein emotional positives Markenerlebnis unabhängig vom kulturellen Hintergrund?</li>
+                    <li>Wie passen wir das Angebot der Zielgruppe an?</li>
+                    <li>Wie könnten wir Packungsgrößen so gestalten, dass sie für Endkonsument:innen attraktiver wirken und Hemmschwellen beim Erstkauf reduzieren?</li>
+                    </ul>
+                    </div>
                 <!-- Right Column: HMW + Analysis -->
 
                             <div class="productText">
@@ -251,28 +270,31 @@
                     <p>Im Rahmen eines Designsprints habe ich im ersten Schritt der <strong>Empathy Phase</strong> visuelle Inhalte untersucht, die auf der Startseite für die Markenidentität verwendet wurden. Dabei fiel mir auf, dass eine Illustration unter „Unsere Geschichte“ unbeabsichtigt <strong>exkludierende visuelle Elemente</strong> enthielt.</p>
                                 </ul>
                     <ul>
-                    <h3>How Might We – Fragen</h3>
-                    <li>Wie könnten wir visuelle Inhalte gestalten, die kulturell inklusiv wirken?</li>
-                    <li>Wie könnten wir Urlaubssymbole nutzen, ohne nationalistische Konnotationen?</li>
-                    <li>Wie lässt sich eine internationale Identität betonen, ohne bestimmte Gruppen auszuschließen?</li>
-                    <li>Wie können wir sofortige Wiedererkennbarkeit zwischen Bildsprache und Markenidentität herstellen?</li>
-                    <li>Wie schaffen wir visuelle Kongruenz über die gesamte Website hinweg?</li>
-                    <li>Wie fördern wir ein emotional positives Markenerlebnis unabhängig vom kulturellen Hintergrund?</li>
-                    </ul>
 
-                    <h3>Empathy Maps & Persona</h3>
-                    <div style="position: relative;">
+
+                    <h3 style="margin-left: 5%;">Empathy Maps & Persona</h3>
                         <div id="empathyCardContainer" class="card-slider">
                         <div class="empathy-card">
                             <img src="media/Amina S._20250426_104117_0000.png" class="empathy-map active" alt="Empathy Map Amina">
                             <img src="media/Mehmet T._20250426_104927_0000.png" class="empathy-map" alt="Empathy Map Mehmet">
                             <img src="media/Serhat K._20250426_103242_0000.png" class="empathy-map" alt="Empathy Map Serhat">
                         </div>
+                        <button id="prevEmpathy" class="nav-button left">&#10094;</button>
+<button id="nextEmpathy" class="nav-button right">&#10095;</button>
+
                         </div>
-                        <div style="display: block;">
-                        <img src="media/Google UX Design Certificate - Persona [Template].png" alt="User Persona" style="width: 100%;">
+                        <div id="visionCardContainer" class="card-slider">
+  <div class="vision-card">
+    <img src="media/Fuse Tea - Benutzergeschichten [Template].png" class="vision-map active" alt="Vision Map 1">
+    <img src="media/Fuse Tea - Benutzergeschichten [Template] (1).png" class="vision-map" alt="Vision Map 2">
+    <img src="media/Fuse Tea - Benutzergeschichten [Template] (2).png" class="vision-map" alt="Vision Map 3">
+  </div>
+  <button id="prevVision">&#10094;</button>
+  <button id="nextVision">&#10095;</button>
+</div>
+                        <div style="display: block; transform: translateX(5%); margin-top: 10%;">
+                        <img src="media/Google UX Design Certificate - Persona [Template].jpeg" alt="User Persona" style="width: 100%;">
                         </div>
-                    </div>
 
                     <ul>
                     <h3>Analyse – Vorher vs. Nachher</h3>
@@ -288,9 +310,7 @@
 
                 <section id="visualComparison" style="margin-top: 4rem;">
                 <h2>Startseiten-Redesign – Visuelle & strukturelle Optimierung</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                    <img src="media/Grafiken vorher nachher.png" alt="Startseite vorher" style="width: 100%; border-radius: 8px;">
-                </div>
+                    <img src="media/Grafiken vorher nachher.png" alt="Startseite vorher" style="width: 100%; border-radius: 8px; display: flex; align-items: center; justify-content:center ;">
 
                             <div class="productText" style="margin-top: 2rem;">
                     <ul>
