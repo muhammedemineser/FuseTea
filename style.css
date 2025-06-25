@@ -5,18 +5,20 @@
 
 @font-face {
   font-family: "montserrat";
-  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
 }
-
 
 @font-face {
   font-family: "montserratItalic";
-  src: url("fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 @font-face {
   font-family: "fredoka";
-  src: url("fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf") format("truetype");
+  src: url("fonts/Fredoka/Fredoka-VariableFont_wdth\,wght.ttf")
+    format("truetype");
 }
 
 html {
@@ -25,12 +27,12 @@ html {
 }
 
 body {
-    width: 100%;
-    background-color: aliceblue;
-    overflow-x: hidden;
+  width: 100%;
+  background-color: aliceblue;
+  overflow-x: hidden;
 }
 :root {
-    --grey: #b4b0bd;
+  --grey: #b4b0bd;
 }
 
 #ueberschrift {
@@ -42,7 +44,6 @@ body {
   font-weight: 500;
   margin: 50px;
 }
-
 
 #projectGoal {
   display: flex;
@@ -84,6 +85,17 @@ h2 {
   height: 7vh;
 }
 
+h3 {
+  display: flex;
+  align-items: center;
+  color: var(--grey);
+  width: 90vw;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "montserrat", sans-serif;
+  margin: 3% 10% 0% 10%;
+  height: 7vh;
+}
 h4 {
   display: inline-block;
   color: var(--grey);
@@ -114,7 +126,6 @@ h4 {
   margin: auto;
 }
 
-
 .toolSet {
   display: flex;
   flex-wrap: nowrap;
@@ -129,7 +140,6 @@ h4 {
   margin-bottom: 10%;
 }
 
-
 .label {
   font-family: "montserrat", sans-serif;
   font-size: 1.5rem;
@@ -137,7 +147,7 @@ h4 {
   color: #333;
   margin-bottom: 10px;
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
@@ -154,7 +164,6 @@ h4 {
   border-radius: 20px;
 }
 
-
 #shortBackstory {
   font-family: "fredoka", sans-serif;
   font-size: 1.2rem;
@@ -164,12 +173,11 @@ h4 {
   text-shadow: 2px 5px 0px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   position: relative;
-    display: flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-
 
 .skip-link {
   display: flex;
@@ -183,7 +191,6 @@ h4 {
   transition: 0.5s ease;
   font-size: 1.3rem;
 }
-
 
 #skipSymbol {
   display: inline-block;
@@ -212,47 +219,45 @@ h4 {
 }
 
 .cartoonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: fit-content;
-    width: auto;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: fit-content;
+  width: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20%;
 }
 
 .cartoonContainer > * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 30vh;
-    border-radius: var(--borderRadius);
-    font-size: 1.2rem;
-    font-family: "Comic", sans-serif;
-    flex-shrink: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  border-radius: var(--borderRadius);
+  font-size: 1.2rem;
+  font-family: "Comic", sans-serif;
+  flex-shrink: 1;
 }
 
-
-
 .textPicCartoon {
-    display: flex;
-    flex-direction: row;
-    height: 90%;
-    width: 90%;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    letter-spacing: 2px;
-    margin: 1%;
-    overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
-    word-wrap: break-word;     /* Fallback für ältere Browser */
-    overflow: hidden;          /* Verhindert, dass etwas überläuft */
-    background-color: white;
-    margin-top: 3px;
-    animation: containerShadow 0.3s ease 0.3s 1 normal forwards;
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+  margin: 1%;
+  overflow-wrap: break-word; /* Lässt lange Wörter umbrechen */
+  word-wrap: break-word; /* Fallback für ältere Browser */
+  overflow: hidden; /* Verhindert, dass etwas überläuft */
+  background-color: white;
+  margin-top: 3px;
+  animation: containerShadow 0.3s ease 0.3s 1 normal forwards;
 }
 
 @keyframes containerShadow {
@@ -293,16 +298,17 @@ span.animation {
   line-height: 1.5;
 }
 
-.cartoonBilder img, #iconYasar {
-    display: flex;
-    max-height: 15rem;
-    margin-right: auto;
-    justify-content: center;
+.cartoonBilder img,
+#iconYasar {
+  display: flex;
+  max-height: 15rem;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .rollen {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   color: var(--grey);
   font-size: 1.8rem;
   font-weight: 600;
@@ -312,26 +318,27 @@ span.animation {
 
 @media (max-width: 3000px) {
   .rollen {
-  margin: 0 !important;
-  font-size: 1.2rem;
-  gap: 1rem !important;
-}
+    margin: 0 !important;
+    font-size: 1.2rem;
+    gap: 1rem !important;
+  }
 
   #workProcess {
     margin-top: 40% !important;
   }
-  .toolSet > .toolItem  {
+  .toolSet > .toolItem {
     display: flex !important;
     flex-shrink: 8 !important;
   }
-  #workProcess, #IA {
+  #workProcess,
+  #IA {
     margin-left: 3% !important;
   }
   .processColumn {
     margin-left: -10% !important;
     flex-shrink: 3 !important;
   }
-  .rollen.Sec :is(h1,h2) {
+  .rollen.Sec :is(h1, h2) {
     margin-left: 3% !important;
   }
   .rollen.Sec :is(ul, li) {
@@ -393,7 +400,7 @@ span.animation {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  gap:90px;
+  gap: 90px;
   width: 80vw;
   height: 100vh;
   color: #333;
@@ -401,7 +408,7 @@ span.animation {
   padding: 30px;
   border: 30px white;
   border-radius: 30px;
-  background-color:aliceblue;
+  background-color: aliceblue;
   margin-top: 10vh;
 }
 
@@ -452,19 +459,22 @@ ul h3 {
   width: 90vw;
 }
 
-.productText h3, #empathyWrapper h3 {
+.productText h3,
+#empathyWrapper h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  min-height: 1rem; 
+  min-height: 1rem;
   color: black;
   line-height: 1.7;
   font-size: 2.2rem;
 }
 
-.productText :is(p, ul li),#empathyGrid :is(ul li), #empathyWrapper :is(ul li) {
+.productText :is(p, ul li),
+#empathyGrid :is(ul li),
+#empathyWrapper :is(ul li) {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  min-height: 1rem; 
+  min-height: 1rem;
   color: black;
   line-height: 1.7;
   font-size: 1.5rem;
@@ -479,48 +489,57 @@ ul h3 {
   margin-top: 5%;
 }
 
-#empathyCardContainer, #visionCardContainer {  
+#empathyCardContainer,
+#visionCardContainer {
   display: block;
   position: relative;
-  left: 50% ;
-    transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
   aspect-ratio: 1/1;
   width: 60%;
   z-index: 1;
   margin-top: 10%;
 }
 
-.empathy-map, .vision-map {
+.empathy-map,
+.vision-map {
   display: none;
   width: 100%;
   border-radius: 16px;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
 }
 
-.empathy-map.active, .vision-map.active {
+.empathy-map.active,
+.vision-map.active {
   display: block;
   position: absolute;
   transform: translateX(0%);
   opacity: 1;
 }
 
-.empathy-map.enter-right, .vision-map.enter-right {
+.empathy-map.enter-right,
+.vision-map.enter-right {
   display: block;
   position: absolute;
   transform: translateX(100%);
   opacity: 0;
 }
 
-.empathy-map.exit-left, .vision-map.exit-left {
+.empathy-map.exit-left,
+.vision-map.exit-left {
   display: block;
   position: absolute;
   transform: translateX(-100%);
   opacity: 0;
 }
 
-.nav-button, #prevVision, #nextVision {
+.nav-button,
+#prevVision,
+#nextVision {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -537,15 +556,19 @@ ul h3 {
   transition: background-color 0.3s ease;
 }
 
-.nav-button:hover, #nextVision:hover, #prevVision:hover {
+.nav-button:hover,
+#nextVision:hover,
+#prevVision:hover {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.nav-button.left, #prevVision {
+.nav-button.left,
+#prevVision {
   left: -20px;
 }
 
-.nav-button.right, #nextVision {
+.nav-button.right,
+#nextVision {
   right: -20px;
 }
 
@@ -553,5 +576,3 @@ ul h3 {
   grid-template-columns: 2;
   grid-template-rows: 1;
 }
-
-
