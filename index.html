@@ -8,9 +8,27 @@
     <script src="script.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- twentytwenty Plugin -->
+    <link rel="stylesheet" href="vendor/twentytwenty/css/twentytwenty.css">
+    <script src="vendor/twentytwenty/js/jquery.event.move.js"></script>
+    <script src="vendor/twentytwenty/js/jquery.twentytwenty.js"></script>
+
     </head>
     <div id="headerContainer"></div>
         <main>
+        <article>
+                <section>
+                    <div class="scroll-wrapper">
+                    <div class="twentytwenty-container">
+                        <img src="img/vorher.png" alt="Vorher-Bild">
+                        <img src="img/nachher.png" alt="Nachher-Bild">
+                    </div>
+                    </div>
+                </section>
+             </article>
             <div id="ueberschrift">UX,UI Design in einem Softdrinks Onlineshop</div>
             <!-- Cartoon -->
             <h1>Projektziel:</h1>
@@ -130,16 +148,17 @@
                                 <li>Empfehlung von Kundenbewertungen im Web</li>
                                 </ul>
                             </div>
+                        </div>
                     </section>
              </article>
              <article id="IASection">
-                <h1 class="revertMargin" >Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
+                <h1 class="revertMargin" style="margin-top: 20vh !important;">Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
                 <h2 class="revertMargin" style="color: black; font-weight: 800;">Informationsarchitektur</h2>
                 <div class="processColumn">
                     <div class="item-row1" style="grid-column:1/3; grid-row: 1 / 14; height:55rem; width: 85rem; background-image: url(/media/vorher_nachher_wireframe.png); background-position: center; background-size: contain; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center;"></div>
                     <section class="rollen Sec" style="margin-left: 0; margin-top: 0;">
-                        <h1 style="color: black; font-weight: 600;">Informationsarchitektur: Vorher vs. Nachher</h1>
-                        <h2 style="color: black; font-weight: 600; font-size: 1.4rem;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
+                        <h1 style="margin-left: 0%; margin-top: 0; color: black; font-weight: 600;">Informationsarchitektur: Vorher vs. Nachher</h1>
+                        <h2 style="margin-top: 0; margin-left: 0%; color: black; font-weight: 600; font-size: 1.4rem;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
 
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-left: 7%;">
 
@@ -184,9 +203,9 @@
              <article>
                  <section id="productSection" style="margin-left: -5%;">  
                     <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-left: 7%; margin-top: -15%;">
-                        <h1 id="workProcess" >Der Arbeitsprozess <span>&nbsp;  Ⅱ</span></h1>
+                        <h1 id="workProcess" style="margin-top: 0% !important;">Der Arbeitsprozess <span>&nbsp;  Ⅱ</span></h1>
                         <h2 id="IA" style="color: black; font-weight: 800;">Produktdarstellung und Anpassung auf Zielgruppe</h2>
-                            <img src="media/vergleich_produktbilder.png" alt="Vergleich der Produktdarstellung vorher und nachher" >                    
+                            <img src="media/vergleich_produktbilder.png" alt="Vergleich der Produktdarstellung vorher und nachher" style="width:100%;grid-template-columns: 1; grid-template-rows: 1; margin-top: 10%; ">                    
                             <div class="productText">
                                 <h2 id="IA" style="color: black; font-weight: 800;">Produktbilder – Vorher vs. Nachher</h2>
 
@@ -236,11 +255,11 @@
                 </section>
              </article>
              <article>
-                                    <h1 id="workProcess" >Der Arbeitsprozess <span>&nbsp;  Ⅲ</span></h1>
-                    <h2 id="IA" >Empathiephase im UX-Designprozess – Beispiel & Analyse
+                                    <h1 id="workProcess" style="margin-top: 20% !important; margin-left: 0%;">Der Arbeitsprozess <span>&nbsp;  Ⅲ</span></h1>
+                    <h2 id="IA" style="color: black; font-weight: 800;">Empathiephase im UX-Designprozess – Beispiel & Analyse
                     </h2>
                     <div id="empathyWrapper">
-                    <h3 >UX-Rechercheergebnisse</h3>
+                    <h3 style="margin-left:3% ;">UX-Rechercheergebnisse</h3>
                     <ul>
                         <li>Der Großteil der Benutzer ist zwischen 16 und 35 Jahre alt.</li>
                         <li>Die Mehrheit der Benutzer hat einen ausländischen Hintergrund.</li>
@@ -248,22 +267,25 @@
                     </ul>
                     </div>
                 <section id="empathyRedesign">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;" id="empathyGrid">
-                    <img src="media/hmw.png" alt="HowMightWe" style="width: 100%;height:50%; aspect-ratio: 1/1; grid-template-columns: 1; grid-template-rows: 1; position: relative; top:10%;">
-                    <ul style="margin-right: 3%;">
-                    <li>Wie könnten wir visuelle Inhalte gestalten, die kulturell inklusiv wirken?</li>
-                    <li>Wie könnten wir Urlaubssymbole nutzen, ohne nationalistische Konnotationen?</li>
-                    <li>Wie lässt sich eine internationale Identität betonen, ohne bestimmte Gruppen auszuschließen?</li>
-                    <li>Wie können wir sofortige Wiedererkennbarkeit zwischen Bildsprache und Markenidentität herstellen?</li>
-                    <li>Wie schaffen wir visuelle Kongruenz über die gesamte Website hinweg?</li>
-                    <li>Wie fördern wir ein emotional positives Markenerlebnis unabhängig vom kulturellen Hintergrund?</li>
-                    <li>Wie passen wir das Angebot der Zielgruppe an?</li>
-                    <li>Wie könnten wir Packungsgrößen so gestalten, dass sie für Endkonsument:innen attraktiver wirken und Hemmschwellen beim Erstkauf reduzieren?</li>
-                    </ul>
+                    <div id="empathyGrid">
+                        <div class="image-wrapper">
+                            <img src="media/hmw.png" alt="HowMightWe">
+                        </div>
+                        <ul>
+                            <li>Wie könnten wir visuelle Inhalte gestalten, die kulturell inklusiv wirken?</li>
+                            <li>Wie könnten wir Urlaubssymbole nutzen, ohne nationalistische Konnotationen?</li>
+                            <li>Wie lässt sich eine internationale Identität betonen, ohne bestimmte Gruppen auszuschließen?</li>
+                            <li>Wie können wir sofortige Wiedererkennbarkeit zwischen Bildsprache und Markenidentität herstellen?</li>
+                            <li>Wie schaffen wir visuelle Kongruenz über die gesamte Website hinweg?</li>
+                            <li>Wie fördern wir ein emotional positives Markenerlebnis unabhängig vom kulturellen Hintergrund?</li>
+                            <li>Wie passen wir das Angebot der Zielgruppe an?</li>
+                            <li>Wie könnten wir Packungsgrößen so gestalten, dass sie für Endkonsument:innen attraktiver wirken?</li>
+                        </ul>
                     </div>
+
                 <!-- Right Column: HMW + Analysis -->
 
-                            <div class="productText">
+                            <div class="productText" style="margin-top: 0% !important;">
                     <ul>
                                     <h3>Ausgangssituation</h3>
                     <p>Im Rahmen eines Designsprints habe ich im ersten Schritt der <strong>Empathy Phase</strong> visuelle Inhalte untersucht, die auf der Startseite für die Markenidentität verwendet wurden. Dabei fiel mir auf, dass eine Illustration unter „Unsere Geschichte“ unbeabsichtigt <strong>exkludierende visuelle Elemente</strong> enthielt.</p>
@@ -271,7 +293,7 @@
                     <ul>
 
 
-                    <h3 >Empathy Maps & Persona</h3>
+                    <h3 style="margin-left: 5%;">Empathy Maps & Persona</h3>
                         <div id="empathyCardContainer" class="card-slider">
                         <div class="empathy-card">
                             <img src="media/Amina S._20250426_104117_0000.png" class="empathy-map active" alt="Empathy Map Amina">
@@ -291,18 +313,18 @@
   <button id="prevVision">&#10094;</button>
   <button id="nextVision">&#10095;</button>
 </div>
-                        <div style="display: block; transform: translateX(5%); margin-top: 10%;">
-                        <img src="media/Google UX Design Certificate - Persona [Template].jpeg" alt="User Persona" style="width: 100%;">
+                        <div style="display: block; transform: translateX(20%); margin-top: -15% !important; margin-bottom: 15% !important;">
+                        <img src="media/Google UX Design Certificate - Persona [Template] (2).png" alt="User Persona" style="width: 60%;">
                         </div>
 
-                    <ul>
+                    <ul style="  list-style-type: disc;">
                     <h3>Analyse – Vorher vs. Nachher</h3>
                     <li><strong>Problem:</strong> Das vorherige Bild zeigte einen Jungen mit Türkei-Shirt – potenziell ausgrenzend für Besucher:innen mit anderer Herkunft. Es konnte unbewusst nationale Zugehörigkeit über Markenbotschaft stellen.</li>
                     <li><strong>UX-Ziel:</strong> Inklusivität, Emotionalität und Identifikation für alle Nutzergruppen stärken.</li>
                     <li><strong>Maßnahme:</strong> Austausch durch eine lila-pinkfarbene Grafik im Stil des Werbeplakats – mit Hawaii-Hemd statt Nationalflagge.</li>
                     <li><strong>Visuelle Wirkung:</strong> Farben wie Pink und Violett fördern laut Farbpsychologie Entspannung, Lust, Lebensfreude und Nostalgie – ideal für emotionalen E-Commerce.</li>
                     <li><strong>Design-Einheitlichkeit:</strong> Der Stil passt zu den übrigen Designelementen und sorgt für kohärente Nutzererfahrung.</li>
-                    <li><strong>Lösung für kulturelle Individualität:</strong> Kennzeichnungen wie „exklusiv aus der <em>Türkei</em> 🇹🇷“ oder „aus <em>Griechenland</em> 🇬🇷“ wurden bewusst eingeführt – sichtbar, aber nicht dominierend.</li>
+                    <li><strong>Lösung für kulturelle Individualität:</strong> Kennzeichnungen wie „exklusiv aus der <em>Türkei</em> “ oder „aus <em>Griechenland</em> 🇬🇷 “ wurden bewusst eingeführt – sichtbar, aber nicht dominierend.</li>
                     </ul>
                 </div>
                 </section>
@@ -326,7 +348,7 @@
              </article>
              <article>
                                 <section>
-                    <h1 id="workProcess" >Der Arbeitsprozess <span>&nbsp;  IV</span></h1>
+                    <h1 id="workProcess" style="margin-top: 15% !important;">Der Arbeitsprozess <span>&nbsp;  IV</span></h1>
                     <div class="productText">
                         <h2 id="IA" style="color: black; font-weight: 800;">Texte & Produktkommunikation – Anpassung an Zielgruppe</h2>
 
@@ -373,12 +395,10 @@
                         </ul>
                     </div>
                 </div>  
-                </section>
+                </section>^
                 <div style="background-image: url(media/textVergleich.png); background-size: contain; width: 90%; border-radius: 15px; height: auto; aspect-ratio: 1/1; background-repeat: no-repeat; margin-top: 10%; margin-left: 5vw;"></div>
-
              </article>
         </main>
-
     </body>
 </html>
 
