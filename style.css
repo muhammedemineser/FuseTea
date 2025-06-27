@@ -613,6 +613,12 @@ ul h3 {
   margin-top: 2rem;
   border-radius: 12px;
   overflow: hidden;
+  height: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
 }
 
 .scroll-wrapper {
@@ -631,4 +637,7 @@ ul h3 {
   height: auto;
 }
 
+.twentytwenty-wrapper {
+  margin:  0 auto;
+}
 
