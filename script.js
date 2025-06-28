@@ -178,23 +178,29 @@ document.getElementById('nextVision').addEventListener('click', (e) => {
 });
 
 
-$(function(){
+window.addEventListener('load', () => {
   $(".twentytwenty-container").twentytwenty();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollWrapper = document.querySelector('.scroll-wrapper');
+  const handle = document.querySelector('.twentytwenty-handle');
 
+  if (scrollWrapper && handle) {
+    scrollWrapper.addEventListener('scroll', () => {
+      const scrollY = scrollWrapper.scrollTop;
 
+      // Basisposition in Prozent
+      const basePercent = 10;
+      const scrollFactor = 0.01;
+      const newPercent = basePercent + scrollY * scrollFactor;
+      const clampedPercent = Math.min(newPercent, 90);
 
-
-
-
-
-
-
-
-
-
-
+      // Setzen von "top" mit !important
+      handle.style.setProperty('top', clampedPercent + '%', 'important');
+    });
+  }
+});
 
 //onload
 });

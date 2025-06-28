@@ -613,17 +613,18 @@ ul h3 {
   margin-top: 2rem;
   border-radius: 12px;
   overflow: hidden;
-  /*
-     Allow the jQuery twentytwenty plugin to set the container height based on
-     the image dimensions. Otherwise the container height is locked to the
-     scroll-wrapper height and the image gets cut off when scrolling.
-   */
-  height: auto;
+  height: 100%;
     display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
   align-content: center;
+  height: auto;
+  margin: 0 auto;
+}
+
+.twentytwenty-before {
+  background-color: #fff;
 }
 
 .scroll-wrapper {
@@ -635,6 +636,7 @@ ul h3 {
   border-radius: 12px;
   border: 1px solid #ccc;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    margin: 0 auto;
 }
 
 .twentytwenty-container img {
@@ -642,15 +644,11 @@ ul h3 {
   height: auto;
 }
 
-/*
-  When the before image is shorter than the after image, show a white
-  background in the uncovered area so the slider transition looks clean.
-*/
-.twentytwenty-before {
-  background-color: #fff;
-}
-
 .twentytwenty-wrapper {
   margin:  0 auto;
 }
 
+#beforeAfterSection {
+  width: 30vw;
+  margin: 0 auto;
+}
