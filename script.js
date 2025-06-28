@@ -182,26 +182,24 @@ window.addEventListener('load', () => {
   $(".twentytwenty-container").twentytwenty();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+
   const scrollWrapper = document.querySelector('.scroll-wrapper');
-  const handle = document.querySelector('.twentytwenty-handle');
+  const root = document.documentElement;
 
-  if (scrollWrapper && handle) {
-    scrollWrapper.addEventListener('scroll', () => {
+  if (scrollWrapper) {
+    const updatePositions = () => {
       const scrollY = scrollWrapper.scrollTop;
-
-      // Basisposition in Prozent
       const basePercent = 10;
       const scrollFactor = 0.01;
-      const newPercent = basePercent + scrollY * scrollFactor;
-      const clampedPercent = Math.min(newPercent, 90);
+      const newPercent = basePercent + scrollY * scrollFactor ;
 
-      // Setzen von "top" mit !important
-      handle.style.setProperty('top', clampedPercent + '%', 'important');
-    });
+      root.style.setProperty('--handle-top', newPercent + '%');
+      root.style.setProperty('--label-top', newPercent + '%');
+    };
+
+    updatePositions();
+    scrollWrapper.addEventListener('scroll', updatePositions);
   }
-});
-
 //onload
 });
 
