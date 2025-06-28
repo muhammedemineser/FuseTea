@@ -629,7 +629,7 @@ ul h3 {
 
 .scroll-wrapper {
   width: 100%;
-  height: 90vh; 
+  height: 100vh; 
   overflow-y: scroll;
   overflow-x: hidden;
   margin: auto;
@@ -649,6 +649,19 @@ ul h3 {
 }
 
 #beforeAfterSection {
-  width: 30vw;
+  width: 40vw;
   margin: 0 auto;
+}
+
+.twentytwenty-handle {
+  top: var(--handle-top, 10%) !important;
+}
+
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before {
+  top: var(--label-top, 10%) !important;
+}
+
+.twentytwenty-overlay {
+  z-index: 32 !important;
 }
