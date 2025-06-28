@@ -40,10 +40,7 @@
       
       var calcOffset = function(dimensionPct) {
         var w = beforeImg.width();
-        // Use the taller image height so the container can fit the
-        // entire "after" image even if the "before" image is shorter.
-        var h = Math.max(beforeImg.height(), afterImg.height());
-        return {
+        var h = Math.max(beforeImg.height(), afterImg.height());        return {
           w: w+"px",
           h: h+"px",
           cw: (dimensionPct*w)+"px",
@@ -103,7 +100,6 @@
         offsetX = container.offset().left;
         offsetY = container.offset().top;
         imgWidth = beforeImg.width(); 
-        // Track the tallest image height for correct slider calculations
         imgHeight = Math.max(beforeImg.height(), afterImg.height());
       };
       var onMove = function(e) {
@@ -152,3 +148,4 @@
   };
 
 })(jQuery);
+
