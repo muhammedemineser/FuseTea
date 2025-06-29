@@ -189,9 +189,11 @@ window.addEventListener('load', () => {
   if (scrollWrapper) {
     const updatePositions = () => {
       const scrollY = scrollWrapper.scrollTop;
+      const scrollHeight = scrollWrapper.scrollHeight - scrollWrapper.clientHeight;
       const basePercent = 10;
-      const scrollFactor = 0.01;
-      const newPercent = basePercent + scrollY * scrollFactor ;
+      const maxPercent = 90;
+      const progress = scrollHeight > 0 ? scrollY / scrollHeight : 0;
+      const newPercent = basePercent + progress * (maxPercent - basePercent);
 
       root.style.setProperty('--handle-top', newPercent + '%');
       root.style.setProperty('--label-top', newPercent + '%');

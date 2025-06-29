@@ -633,11 +633,45 @@ ul h3 {
   overflow-y: scroll;
   overflow-x: hidden;
   margin: auto;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-radius: 30px;
+  border: 6px solid black;
     margin: 0 auto;
 }
+
+.scroll-wrapper {
+  overflow-y: auto;        /* stellt sicher, dass die Scrollbar erscheint */
+}
+
+/* WebKit-Browser (Chrome, Edge, Safari) */
+.scroll-wrapper::-webkit-scrollbar {
+  width: 15px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 15px;
+}
+/* Create a fade effect on the top and bottom of the scrollbar track using a linear-gradient background */
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    rgba(240,240,240,0.03) 0%,
+    #f0f0f0 20%,
+    #f0f0f0 80%,
+    rgba(240,240,240,0.03) 100%
+  );
+  border-radius: 15px;
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #a365f2;
+  border-radius: 15px;
+  border: 2px solid #f0f0f0; /* für Padding-Effekt */
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #6b2dbf;
+}
+
 
 .twentytwenty-container img {
   width: 100%;
@@ -649,9 +683,10 @@ ul h3 {
 }
 
 #beforeAfterSection {
-  width: 40vw;
+  width: 45vw;
   margin: 0 auto;
 }
+
 
 .twentytwenty-handle {
   top: var(--handle-top, 10%) !important;
@@ -660,8 +695,12 @@ ul h3 {
 .twentytwenty-before-label:before,
 .twentytwenty-after-label:before {
   top: var(--label-top, 10%) !important;
+  background-color: #333 !important;
+  color: white !important;
 }
+
 
 .twentytwenty-overlay {
   z-index: 32 !important;
 }
+
