@@ -7,44 +7,44 @@
   <style>
     @media (max-width: 600px) {
       
-  #header {
+  #b {
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
   }
 
-  #logo {
+  #c {
     margin-bottom: 10px;
   }
 
-  #search-container {
+  #d {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  #search-bar {
+  #f {
     width: 100%;
     max-width: 300px;
     margin-top: 5px;
   }
 
-  #menu-container {
+  #g {
     margin-top: 10px;
   }
 
-  .icon-wrapper img {
+  .k img {
     width: 24px; 
   }
 
-  .header-background {
+  .j {
     padding: 10px;
   }
 }
     @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-    body {
+    #z {
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
@@ -53,7 +53,7 @@
       overflow-x: hidden;
     }
 
-    .header-background {
+    .j {
       background-color: #002366;
       border-radius: 0 0 60px 60px;
       padding: 10px 250px 10px;
@@ -65,56 +65,56 @@
       z-index: 10;
     }
 
-    .header-background.shrink {
+    .j.s {
       padding: 5px 80px 5px;
       transform: scale(0.95);
     }
 
-    header {
+    #b {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    #logo {
+    #c {
       height: 100px;
       transition: all 0.4s ease;
     }
 
 
 
-    .icon-wrapper {
+    .k {
       display: inline-block;
       border-radius: 50%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .icon-wrapper:hover {
+    .k:hover {
       transform: scale(1.05);
     }
 
-    #search-container, #menu-container {
+    #d, #g {
       position: relative;
       display: inline-block;
     }
 
-    #search-icon {
+    #e {
       height: 50px;
       transition: height 0.4s ease;
       background-image: url('suchsymbol.png');
       background-position: center;
     }
 
-    #search-icon {
+    #e {
      margin-top: 12px;
     }
 
-    .shrink #search-icon,
-    .shrink #menu-icon {
+    .s #e,
+    .s #menu-icon {
       height: 35px;
     }
 
-    #search-bar {
+    #f {
       font-family: 'Rubik', sans-serif;
       position: absolute;
       right: 80px;
@@ -133,14 +133,14 @@
       transition: all 0.4s ease;
     }
 
-    #search-container:hover #search-bar {
+    #d:hover #f {
       width: 240px;
       padding: 10px;
       opacity: 1;
 
     }
 
-      #search-container.hover, #search-bar.hover {
+      #d.t, #f.t {
       width: 240px;
       padding: 10px;
       opacity: 1;
@@ -148,7 +148,7 @@
     }
 
 
-    #nav-menu {
+    #h {
       position: absolute;
       top: 70px;
       right: 0;
@@ -165,7 +165,7 @@
       z-index: 100;
     }
 
-    #nav-menu ul {
+    #h ul {
       list-style: none;
       margin: 0;
       padding: 0;
@@ -174,7 +174,7 @@
       flex-wrap: nowrap;
     }
 
-    #nav-menu li {
+    #h li {
       margin: 0 10px;
       color: #fff;
       font-weight: 500;
@@ -184,13 +184,13 @@
       white-space: nowrap;
     }
 
-    #nav-menu li:hover, #nav-menu li.hover{
+    #h li:hover, #h li.t{
       color: #002366;
       transform: translateY(-2px);
       backdrop-filter: blur(15px);
     }
 
-    #nav-menu li {
+    #h li {
       margin: 0 10px;
       color: #fff;
       font-weight: 500;
@@ -205,7 +205,7 @@
 
     }
 
-    #nav-menu li:hover, #nav-menu li.hover {
+    #h li:hover, #h li.t {
       color: #002366;
       background: #ffffff;
       box-shadow: 0px -3px 20px #FDFDF5, 0px 3px 20px #002366;
@@ -215,21 +215,21 @@
       backdrop-filter: blur(15px);
     }
 
-    #nav-menu.hover {
+    #h.t {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
     }
 
 
-    #menu-container:hover {
+    #g:hover {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
 
     }
 
-    .carousel-container {
+    .l {
       position: absolute;
       top: calc(100% + 40px);
       left: 0;
@@ -241,20 +241,20 @@
       align-items: center;
     }
 
-    .carousel {
+    .o {
       overflow: hidden;
       height: 400px;
       width: 100%;
     }
 
-    .carousel-track {
+    .p {
       display: flex;
       flex-direction: column;
       transition: transform 0.6s ease;
       padding: 50px;
     }
 
-    .carousel-card {
+    .q {
       background: white;
       border-radius: 20px;
       margin: 15px 0;
@@ -264,13 +264,13 @@
       transform: scale(0.95);
     }
 
-    .carousel-card.active {
+    .q.r {
       transform: scale(1.15);
       height: 140px;
       z-index: 1;
     }
 
-    .dots {
+    .m {
       position: absolute;
       left: 20px;
       top: 50%;
@@ -280,7 +280,7 @@
       gap: 12px;
     }
 
-    .dot {
+    .n {
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -289,29 +289,29 @@
       transition: all 0.3s ease;
     }
 
-    .dot.active {
+    .n.r {
       transform: scale(1.5);
       opacity: 1;
     }
   </style>
 </head>
-<body>
-  <div class="header-background" id="header-bg">
-    <header id="header">
-      <img id="logo" src="Mein Icon 1.png" alt="Logo" style="margin-right: 25px;"/>
+<body id="z">
+  <div class="j" id="a">
+    <header id="b">
+      <img id="c" src="Mein Icon 1.png" alt="Logo" style="margin-right: 25px;"/>
       <div style="display: flex; gap: 50px; align-items: center;">
 
-        <div id="search-container">
-          <div class="icon-wrapper" style="height: 80px; width: 80px;">
-            <span id="search-icon" alt="Search" style="margin-left: 10px;margin-bottom: 8px; background-image: url('suchsymbol.png'); background-position: center; background-size: contain; display: inline-block; width: 100%; height: 100%;"></span>
+        <div id="d">
+          <div class="k" style="height: 80px; width: 80px;">
+            <span id="e" alt="Search" style="margin-left: 10px;margin-bottom: 8px; background-image: url('suchsymbol.png'); background-position: center; background-size: contain; display: inline-block; width: 100%; height: 100%;"></span>
           </div>
-          <input type="text" id="search-bar" placeholder="Search..." />
+          <input type="text" id="f" placeholder="Search..." />
         </div>
-        <div id="menu-container">
-          <div class="icon-wrapper" style="height: 80px; width: 80px;">
+        <div id="g">
+          <div class="k" style="height: 80px; width: 80px;">
               <img src="nav2.png" alt="" style="margin-left: 25px; margin-right: 25px; width: 100%; height: 100%; display: inline;">
           </div>
-          <div id="nav-menu">
+          <div id="h">
             <ul>
               <li>Home</li>
               <li>About Me</li>
@@ -326,47 +326,47 @@
       </div>
     </header>
   </div>
-  <div class="carousel-container">
-    <div class="dots">
-      <div class="dot"></div>
-      <div class="dot active"></div>
-      <div class="dot"></div>
+  <div class="l">
+    <div class="m">
+      <div class="n"></div>
+      <div class="n r"></div>
+      <div class="n"></div>
     </div>
-    <div class="carousel" id="carousel">
-      <div class="carousel-track">
-        <div class="carousel-card"></div>
-        <div class="carousel-card active"></div>
-        <div class="carousel-card"></div>
+    <div class="o" id="i">
+      <div class="p">
+        <div class="q"></div>
+        <div class="q r"></div>
+        <div class="q"></div>
       </div>
     </div>
   </div>
 
   <script>
-    const headerBg = document.getElementById("header-bg");
-    const header = document.getElementById("header");
+    const headerBg = document.getElementById("a");
+    const header = document.getElementById("b");
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 30) {
-        headerBg.classList.add("shrink");
-        header.classList.add("shrink");
+        headerBg.classList.add("s");
+        header.classList.add("s");
       } else {
-        headerBg.classList.remove("shrink");
-        header.classList.remove("shrink");
+        headerBg.classList.remove("s");
+        header.classList.remove("s");
       }
     });
 
-    const carousel = document.querySelector(".carousel");
-    const track = document.querySelector(".carousel-track");
+    const carousel = document.querySelector(".o");
+    const track = document.querySelector(".p");
     const cards = Array.from(track.children);
-    const dots = document.querySelectorAll(".dot");
+    const dots = document.querySelectorAll(".n");
 
     let current = 1;
     function updateCarousel() {
       cards.forEach((card, index) => {
-        card.classList.toggle("active", index === current);
+        card.classList.toggle("r", index === current);
       });
       dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === current);
+        dot.classList.toggle("r", index === current);
       });
       track.style.transform = `translateY(${-140 * (current - 1)}px)`;
     }
@@ -383,22 +383,22 @@
 
     updateCarousel();
 
-const container = document.getElementById("menu-container");
-const menu = document.getElementById("nav-menu");
+const container = document.getElementById("g");
+const menu = document.getElementById("h");
 
 let isHovered = false;
 let isFixed = false;
 
 container.addEventListener("mouseover", () => {
   if (!isFixed) {
-    menu.classList.add("hover");
+    menu.classList.add("t");
   }
   isHovered = true;
 });
 
 container.addEventListener("mouseleave", () => {
   if (!isFixed) {
-    menu.classList.remove("hover");
+    menu.classList.remove("t");
   }
   isHovered = false;
 });
@@ -408,32 +408,32 @@ let isClicked = 0;
 container.addEventListener("click", () => {
   if (isClicked %2 === 0) {
     isFixed = true;
-    menu.classList.add("hover");
+    menu.classList.add("t");
     isClicked++;
   }
   else {
     isFixed = false;
-    menu.classList.remove("hover");
+    menu.classList.remove("t");
     isClicked++;
   }
 });
 
-const searchContainer = document.getElementById("search-container");
-const searchMenu = document.getElementById("search-bar");
+const searchContainer = document.getElementById("d");
+const searchMenu = document.getElementById("f");
 
 let searchIsHovered = false;
 let searchIsFixed = false;
 
 searchContainer.addEventListener("mouseover", () => {
   if (!searchIsFixed) {
-    searchMenu.classList.add("hover");
+    searchMenu.classList.add("t");
   }
   searchIsHovered = true;
 });
 
 searchContainer.addEventListener("mouseleave", () => {
   if (!searchIsFixed) {
-    searchMenu.classList.remove("hover");
+    searchMenu.classList.remove("t");
   }
   searchIsHovered = false;
 });
@@ -443,12 +443,12 @@ let searchIsClicked = 0;
 searchContainer.addEventListener("click", () => {
   if (searchIsClicked %2 === 0) {
     searchIsFixed = true;
-    searchMenu.classList.add("hover");
+    searchMenu.classList.add("t");
     searchIsClicked++;
   }
   else {
     searchIsFixed = false;
-    searchMenu.classList.remove("hover");
+    searchMenu.classList.remove("t");
     searchIsClicked++;
   }
 });
