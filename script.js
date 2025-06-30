@@ -180,6 +180,27 @@ document.getElementById('nextVision').addEventListener('click', (e) => {
 
 window.addEventListener('load', () => {
   $(".twentytwenty-container").twentytwenty();
+
+  const beforeImg = document.getElementById('beforeImg');
+  const afterImg = document.getElementById('afterImg');
+
+  const setHeight = () => {
+    if (beforeImg && afterImg) {
+      const height = afterImg.clientHeight;
+      if (height > 0) {
+        beforeImg.style.height = height + 'px';
+        beforeImg.style.width = 'auto';
+      }
+    }
+  };
+
+  if (afterImg) {
+    if (afterImg.complete) {
+      setHeight();
+    } else {
+      afterImg.onload = setHeight;
+    }
+  }
 });
 
 
@@ -190,10 +211,10 @@ window.addEventListener('load', () => {
     const updatePositions = () => {
       const scrollY = scrollWrapper.scrollTop;
       const scrollHeight = scrollWrapper.scrollHeight - scrollWrapper.clientHeight;
-      const basePercent = 10;
+      const basePercent = 3;
       const maxPercent = 90;
       const progress = scrollHeight > 0 ? scrollY / scrollHeight : 0;
-      const newPercent = basePercent + progress * (maxPercent - basePercent);
+      const newPercent = basePercent + progress * 1.1 *(maxPercent - basePercent);
 
       root.style.setProperty('--handle-top', newPercent + '%');
       root.style.setProperty('--label-top', newPercent + '%');

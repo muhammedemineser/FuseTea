@@ -17,9 +17,19 @@
     <script src="vendor/twentytwenty/js/jquery.twentytwenty.js"></script>
 
     </head>
+    <body>
+        <div id="header-placeholder"></div>
+
+  <script>
+    fetch("header/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
     <div id="headerContainer"></div>
         <main>
-            <div id="ueberschrift">UX,UI Design in einem Softdrinks Onlineshop</div>
+            <div id="ueberschrift" style="padding: 2rem;">UX,UI Design in einem Softdrinks Onlineshop</div>
             <!-- Cartoon -->
             <h1>Projektziel:</h1>
             <div id="projectDescription">
@@ -56,8 +66,8 @@
                 <section id="beforeAfterSection">
                     <div class="scroll-wrapper">
                     <div class="twentytwenty-container">
-                        <img src="img/vorher.jpg" alt="Vorher-Bild" style="background-size: cover;">
-                        <img src="img/nachher.png" alt="Nachher-Bild">
+                        <img id="beforeImg" src="img/vorher.jpg" alt="Vorher-Bild" style="background-size: cover;">
+                        <img id="afterImg" src="img/nachher.png" alt="Nachher-Bild">
                     </div>
                     </div>
                 </section>
@@ -152,17 +162,18 @@
                     </section>
              </article>
              <article id="IASection">
-                <h1 class="revertMargin" style="margin-top: 20vh !important;">Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
-                <h2 class="revertMargin" style="color: black; font-weight: 800;">Informationsarchitektur</h2>
+                <h1 class="revertMargin" style="margin-top: 20vh !important; margin-left: 0% !important;">Der Arbeitsprozess <span>&nbsp; Ⅰ</span></h1>
+                <h2 class="revertMargin" style="color: black; font-weight: 800;margin-left: 0% !important;">Informationsarchitektur</h2>
                 <div class="processColumn">
                     <div class="item-row1" style="grid-column:1/3; grid-row: 1 / 14; height:55rem; width: 85rem; background-image: url(/media/vorher_nachher_wireframe.png); background-position: center; background-size: contain; background-repeat: no-repeat; margin: 0 auto; margin-right: 35%;"></div>
                     <section class="rollen Sec" style="margin-left: 0; margin-top: 0;">
-                        <h1 style="margin-left: 0%; margin-top: 0; color: black; font-weight: 600;">Informationsarchitektur: Vorher vs. Nachher</h1>
-                        <h2 style="margin-top: 0; margin-left: 0%; color: black; font-weight: 600; font-size: 1.4rem;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
+                        <h1 style="margin-left: 10% !important; margin-top: 0; color: black; font-weight: 600;">Informationsarchitektur: Vorher vs. Nachher</h1>
+                        <h2 style="margin-top: 0; margin-left: 10% !important; color: black; font-weight: 600; font-size: 1.4rem;">Rechercheergebnis: Die Mehrheit der Nutzer <br>greift über Mobilgeräte auf die Website zu. Daher: Mobile First Ansatz.</h2>
 
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-left: 7%;">
+                        <div style="display: grid;
+ gap: 1.5rem; margin-left: 7%;">
 
-                            <ul class="beforeAfterIA" >
+                            <ul class="beforeAfterIA" style="margin-left: 5% !important;">
                             <h3 style="min-height: 1rem; color: black; font-weight: 600; ">Vorher</h3>
                             <li>Kein Mobile-First Design</li>
                             <li>Überladung durch drei visuell überfordernde Kästen im Header</li>
@@ -174,7 +185,7 @@
                             <li>Großflächige Grafik ohne funktionalen Mehrwert</li>
                             </ul>
 
-                            <ul class="beforeAfterIA" >
+                            <ul class="beforeAfterIA" style="margin-left: 5% !important;">
                             <h3 style="min-height: 1rem; color: black; font-weight: 600;">Nachher</h3>
                             <li>Mobile-First Struktur: klare vertikale Nutzerführung</li>
                             <li>Reduktion auf das Wesentliche – kognitive Entlastung</li>
@@ -255,12 +266,12 @@
                 </section>
              </article>
              <article>
-                                    <h1 id="workProcess" style="margin-top: 20% !important; margin-left: 0%;">Der Arbeitsprozess <span>&nbsp;  Ⅲ</span></h1>
-                    <h2 id="IA" style="color: black; font-weight: 800;">Empathiephase im UX-Designprozess – Beispiel & Analyse
+                                    <h1 id="workProcess" style="margin-top: 20% !important; margin-left: 5% !important;">Der Arbeitsprozess <span>&nbsp;  Ⅲ</span></h1>
+                    <h2 id="IA" style="color: black; font-weight: 800; margin-left: 5% !important;">Empathiephase im UX-Designprozess – Beispiel & Analyse
                     </h2>
                     <div id="empathyWrapper">
-                    <h3 style="margin-left:3% ;">UX-Rechercheergebnisse</h3>
-                    <ul>
+                    <h3 style="margin-left:8% !important;">UX-Rechercheergebnisse</h3>
+                    <ul style="margin-left: 3% !important;">
                         <li>Der Großteil der Benutzer ist zwischen 16 und 35 Jahre alt.</li>
                         <li>Die Mehrheit der Benutzer hat einen ausländischen Hintergrund.</li>
                         <li>Die Kunden des Start-ups sind überwiegend Endkonsument:innen.</li>
@@ -348,9 +359,9 @@
              </article>
              <article>
                                 <section>
-                    <h1 id="workProcess" style="margin-top: 15% !important;">Der Arbeitsprozess <span>&nbsp;  IV</span></h1>
+                    <h1 id="workProcess" style="margin-top: 15% !important; margin-left: 5% !important;">Der Arbeitsprozess <span>&nbsp;  IV</span></h1>
                     <div class="productText">
-                        <h2 id="IA" style="color: black; font-weight: 800;">Texte & Produktkommunikation – Anpassung an Zielgruppe</h2>
+                        <h2 id="IA" style="color: black; font-weight: 800; margin-left: 5% !important;">Texte & Produktkommunikation – Anpassung an Zielgruppe</h2>
 
                         <ul>
                         <h3>Hintergrund & Ausgangslage</h3>
@@ -397,6 +408,48 @@
                 </div>  
                 </section>^
                 <div style="background-image: url(media/textVergleich.png); background-size: contain; width: 90%; border-radius: 15px; height: auto; aspect-ratio: 1/1; background-repeat: no-repeat; margin-top: 10%; margin-left: 5vw;"></div>
+             </article>
+             <article>
+                <section id="postLaunchResearch" style="padding: 4rem 2rem; background: #f9f9f9; border-top: 2px solid #e0e0e0;">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">🚀 Post-Launch Research & Rückmeldung</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                    
+                    <!-- Linke Seite: Visuelle Darstellung (Chat-Style Bubbles) -->
+                    <div>
+                    <div style="background: white; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+                        <strong>🧪 Nutzerfeedback:</strong><br>
+                        „Die Seite ist super einfach zu navigieren – ich wusste sofort, was ich tun muss.“
+                    </div>
+
+                    <div style="background: #fff; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+                        <strong>📱 UX-Test im Bekanntenkreis:</strong><br>
+                        „Alles wirkt stimmig, schön gestaltet und intuitiv – gefällt mir richtig gut.“
+                    </div>
+
+                    <div style="background: #e9f6ee; padding: 1.2rem 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-left: 4px solid #00c37a;">
+                        <strong>👔 Rückmeldung vom Klienten:</strong><br>
+                        „Ich bin wirklich beeindruckt! Das übertrifft meine Erwartungen – danke für die professionelle Unterstützung.“
+                    </div>
+                    </div>
+
+                    <!-- Rechte Seite: Zusammenfassung als Text -->
+                    <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Qualitatives Feedback & berufliche Anerkennung</h3>
+                    <ul style="font-size: 1.1rem; line-height: 1.7;">
+                        <li>Ich präsentierte die Website mehreren Personen aus meinem privaten Umfeld und beobachtete deren Interaktionen.</li>
+                        <li>Das Nutzerverhalten war durchweg positiv: einfache Navigation, gutes Layout, schnelle Orientierung.</li>
+                        <li>In einem Nachgespräch mit dem Unternehmer erhielten wir sehr positives Feedback – inklusive beruflicher Anerkennung.</li>
+                        <li>Der Klient zeigte sich begeistert vom Resultat und bestätigte, dass er mich in Zukunft für weitere Designprojekte beauftragen wird.</li>
+                        <li>Er kündigte außerdem an, mich öffentlich weiterzuempfehlen – ein bedeutender Schritt für mich als angehenden UX-Designer.</li>
+                    </ul>
+
+                    <p style="margin-top: 1.5rem; font-style: italic; color: #555;">Dieses Feedback zeigt, dass Design nicht nur Interface ist – sondern Wirkung, Beziehung und Vertrauen schafft.</p>
+
+                    <a href="index_Rueckblick.html" style="display: inline-block; margin-top: 2rem; background: #222; color: white; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; font-weight: bold;">📝 Weiter zu: Sprint Review & Learnings</a>
+                    </div>
+                </div>
+                </section>
              </article>
         </main>
     </body>

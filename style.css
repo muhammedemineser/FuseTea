@@ -40,7 +40,8 @@ body {
   font-family: "montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
-  margin: 50px;
+    margin: 0;
+  padding: 0;
 }
 
 
@@ -69,7 +70,7 @@ h1 {
 }
 
 .revertMargin {
-  margin: 8% 10% 2% -5% !important;
+  margin: 8% 10% 2% 10% !important;
 }
 
 h2 {
@@ -460,6 +461,7 @@ ul h3 {
   color: black;
   line-height: 1.7;
   font-size: 2.2rem;
+  margin-left: 3% !important;
 }
 
 .productText :is(p, ul li),#empathyGrid :is(ul li), #empathyWrapper :is(ul li) {
@@ -470,6 +472,10 @@ ul h3 {
   line-height: 1.7;
   font-size: 1.5rem;
   margin-left: 3%;
+}
+
+.productText ul li  {
+  margin-left: 5% !important;
 }
 
 #empathyGrid ul li {
@@ -683,7 +689,7 @@ ul h3 {
 }
 
 #beforeAfterSection {
-  width: 45vw;
+  width: 90vw;
   margin: 0 auto;
 }
 
@@ -704,3 +710,15 @@ ul h3 {
   z-index: 32 !important;
 }
 
+#postLaunchResearch div strong {
+  font-family: "montserrat", sans-serif;
+  font-weight:600;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+#postLaunchResearch div{
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
