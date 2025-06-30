@@ -175,7 +175,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
       white-space: nowrap;
-     font-family:"Montserrat", sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     #h li:hover, #h li.t{
