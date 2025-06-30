@@ -11,33 +11,6 @@
       }
     });
 
-    const carousel = document.querySelector(".o");
-    const track = document.querySelector(".p");
-    const cards = Array.from(track.children);
-    const dots = document.querySelectorAll(".n");
-
-    let current = 1;
-    function updateCarousel() {
-      cards.forEach((card, index) => {
-        card.classList.toggle("r", index === current);
-      });
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("r", index === current);
-      });
-      track.style.transform = `translateY(${-140 * (current - 1)}px)`;
-    }
-
-    carousel.addEventListener("wheel", (e) => {
-      e.preventDefault();
-      if (e.deltaY > 0) {
-        current = Math.min(cards.length - 1, current + 1);
-      } else {
-        current = Math.max(0, current - 1);
-      }
-      updateCarousel();
-    }, { passive: false });
-
-    updateCarousel();
 
 const container = document.getElementById("g");
 const menu = document.getElementById("h");

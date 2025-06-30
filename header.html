@@ -229,70 +229,6 @@
 
     }
 
-    .carousel-container {
-      position: absolute;
-      top: calc(100% + 40px);
-      left: 0;
-      width: 50vw;
-      height: 400px;
-      padding-left: 60px;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-    }
-
-    .carousel {
-      overflow: hidden;
-      height: 400px;
-      width: 100%;
-    }
-
-    .carousel-track {
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.6s ease;
-      padding: 50px;
-    }
-
-    .carousel-card {
-      background: white;
-      border-radius: 20px;
-      margin: 15px 0;
-      height: 100px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      transform: scale(0.95);
-    }
-
-    .carousel-card.active {
-      transform: scale(1.15);
-      height: 140px;
-      z-index: 1;
-    }
-
-    .dots {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: gray;
-      opacity: 0.5;
-      transition: all 0.3s ease;
-    }
-
-    .dot.active {
-      transform: scale(1.5);
-      opacity: 1;
-    }
   </style>
 </head>
 <body>
@@ -326,20 +262,6 @@
       </div>
     </header>
   </div>
-  <div class="carousel-container">
-    <div class="dots">
-      <div class="dot"></div>
-      <div class="dot active"></div>
-      <div class="dot"></div>
-    </div>
-    <div class="carousel" id="carousel">
-      <div class="carousel-track">
-        <div class="carousel-card"></div>
-        <div class="carousel-card active"></div>
-        <div class="carousel-card"></div>
-      </div>
-    </div>
-  </div>
 
   <script>
     const headerBg = document.getElementById("header-bg");
@@ -355,33 +277,6 @@
       }
     });
 
-    const carousel = document.querySelector(".carousel");
-    const track = document.querySelector(".carousel-track");
-    const cards = Array.from(track.children);
-    const dots = document.querySelectorAll(".dot");
-
-    let current = 1;
-    function updateCarousel() {
-      cards.forEach((card, index) => {
-        card.classList.toggle("active", index === current);
-      });
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === current);
-      });
-      track.style.transform = `translateY(${-140 * (current - 1)}px)`;
-    }
-
-    carousel.addEventListener("wheel", (e) => {
-      e.preventDefault();
-      if (e.deltaY > 0) {
-        current = Math.min(cards.length - 1, current + 1);
-      } else {
-        current = Math.max(0, current - 1);
-      }
-      updateCarousel();
-    }, { passive: false });
-
-    updateCarousel();
 
 const container = document.getElementById("menu-container");
 const menu = document.getElementById("nav-menu");
