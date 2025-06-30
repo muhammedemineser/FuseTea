@@ -7,44 +7,44 @@
   <style>
     @media (max-width: 600px) {
       
-  #b {
+  #header {
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
   }
 
-  #c {
+  #logo {
     margin-bottom: 10px;
   }
 
-  #d {
+  #search-container {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  #f {
+  #search-bar {
     width: 100%;
     max-width: 300px;
     margin-top: 5px;
   }
 
-  #g {
+  #menu-container {
     margin-top: 10px;
   }
 
-  .k img {
+  .icon-wrapper img {
     width: 24px; 
   }
 
-  .j {
+  .header-background {
     padding: 10px;
   }
 }
     @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-    #z {
+    body {
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
@@ -53,7 +53,7 @@
       overflow-x: hidden;
     }
 
-    .j {
+    .header-background {
       background-color: #002366;
       border-radius: 0 0 60px 60px;
       padding: 10px 250px 10px;
@@ -65,56 +65,56 @@
       z-index: 10;
     }
 
-    .j.s {
+    .header-background.shrink {
       padding: 5px 80px 5px;
       transform: scale(0.95);
     }
 
-    #b {
+    header {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    #c {
+    #logo {
       height: 100px;
       transition: all 0.4s ease;
     }
 
 
 
-    .k {
+    .icon-wrapper {
       display: inline-block;
       border-radius: 50%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .k:hover {
+    .icon-wrapper:hover {
       transform: scale(1.05);
     }
 
-    #d, #g {
+    #search-container, #menu-container {
       position: relative;
       display: inline-block;
     }
 
-    #e {
+    #search-icon {
       height: 50px;
       transition: height 0.4s ease;
       background-image: url('suchsymbol.png');
       background-position: center;
     }
 
-    #e {
+    #search-icon {
      margin-top: 12px;
     }
 
-    .s #e,
-    .s #menu-icon {
+    .shrink #search-icon,
+    .shrink #menu-icon {
       height: 35px;
     }
 
-    #f {
+    #search-bar {
       font-family: 'Rubik', sans-serif;
       position: absolute;
       right: 80px;
@@ -133,14 +133,14 @@
       transition: all 0.4s ease;
     }
 
-    #d:hover #f {
+    #search-container:hover #search-bar {
       width: 240px;
       padding: 10px;
       opacity: 1;
 
     }
 
-      #d.t, #f.t {
+      #search-container.hover, #search-bar.hover {
       width: 240px;
       padding: 10px;
       opacity: 1;
@@ -148,7 +148,7 @@
     }
 
 
-    #h {
+    #nav-menu {
       position: absolute;
       top: 70px;
       right: 0;
@@ -165,7 +165,7 @@
       z-index: 100;
     }
 
-    #h ul {
+    #nav-menu ul {
       list-style: none;
       margin: 0;
       padding: 0;
@@ -174,7 +174,7 @@
       flex-wrap: nowrap;
     }
 
-    #h li {
+    #nav-menu li {
       margin: 0 10px;
       color: #fff;
       font-weight: 500;
@@ -184,13 +184,13 @@
       white-space: nowrap;
     }
 
-    #h li:hover, #h li.t{
+    #nav-menu li:hover, #nav-menu li.hover{
       color: #002366;
       transform: translateY(-2px);
       backdrop-filter: blur(15px);
     }
 
-    #h li {
+    #nav-menu li {
       margin: 0 10px;
       color: #fff;
       font-weight: 500;
@@ -205,7 +205,7 @@
 
     }
 
-    #h li:hover, #h li.t {
+    #nav-menu li:hover, #nav-menu li.hover {
       color: #002366;
       background: #ffffff;
       box-shadow: 0px -3px 20px #FDFDF5, 0px 3px 20px #002366;
@@ -215,21 +215,21 @@
       backdrop-filter: blur(15px);
     }
 
-    #h.t {
+    #nav-menu.hover {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
     }
 
 
-    #g:hover {
+    #menu-container:hover {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
 
     }
 
-    .l {
+    .carousel-container {
       position: absolute;
       top: calc(100% + 40px);
       left: 0;
@@ -241,20 +241,20 @@
       align-items: center;
     }
 
-    .o {
+    .carousel {
       overflow: hidden;
       height: 400px;
       width: 100%;
     }
 
-    .p {
+    .carousel-track {
       display: flex;
       flex-direction: column;
       transition: transform 0.6s ease;
       padding: 50px;
     }
 
-    .q {
+    .carousel-card {
       background: white;
       border-radius: 20px;
       margin: 15px 0;
@@ -264,13 +264,13 @@
       transform: scale(0.95);
     }
 
-    .q.r {
+    .carousel-card.active {
       transform: scale(1.15);
       height: 140px;
       z-index: 1;
     }
 
-    .m {
+    .dots {
       position: absolute;
       left: 20px;
       top: 50%;
@@ -280,7 +280,7 @@
       gap: 12px;
     }
 
-    .n {
+    .dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -289,29 +289,29 @@
       transition: all 0.3s ease;
     }
 
-    .n.r {
+    .dot.active {
       transform: scale(1.5);
       opacity: 1;
     }
   </style>
 </head>
-<body id="z">
-  <div class="j" id="a">
-    <header id="b">
-      <img id="c" src="Mein Icon 1.png" alt="Logo" style="margin-right: 25px;"/>
+<body>
+  <div class="header-background" id="header-bg">
+    <header id="header">
+      <img id="logo" src="Mein Icon 1.png" alt="Logo" style="margin-right: 25px;"/>
       <div style="display: flex; gap: 50px; align-items: center;">
 
-        <div id="d">
-          <div class="k" style="height: 80px; width: 80px;">
-            <span id="e" alt="Search" style="margin-left: 10px;margin-bottom: 8px; background-image: url('suchsymbol.png'); background-position: center; background-size: contain; display: inline-block; width: 100%; height: 100%;"></span>
+        <div id="search-container">
+          <div class="icon-wrapper" style="height: 80px; width: 80px;">
+            <span id="search-icon" alt="Search" style="margin-left: 10px;margin-bottom: 8px; background-image: url('suchsymbol.png'); background-position: center; background-size: contain; display: inline-block; width: 100%; height: 100%;"></span>
           </div>
-          <input type="text" id="f" placeholder="Search..." />
+          <input type="text" id="search-bar" placeholder="Search..." />
         </div>
-        <div id="g">
-          <div class="k" style="height: 80px; width: 80px;">
+        <div id="menu-container">
+          <div class="icon-wrapper" style="height: 80px; width: 80px;">
               <img src="nav2.png" alt="" style="margin-left: 25px; margin-right: 25px; width: 100%; height: 100%; display: inline;">
           </div>
-          <div id="h">
+          <div id="nav-menu">
             <ul>
               <li>Home</li>
               <li>About Me</li>
@@ -326,47 +326,47 @@
       </div>
     </header>
   </div>
-  <div class="l">
-    <div class="m">
-      <div class="n"></div>
-      <div class="n r"></div>
-      <div class="n"></div>
+  <div class="carousel-container">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot active"></div>
+      <div class="dot"></div>
     </div>
-    <div class="o" id="i">
-      <div class="p">
-        <div class="q"></div>
-        <div class="q r"></div>
-        <div class="q"></div>
+    <div class="carousel" id="carousel">
+      <div class="carousel-track">
+        <div class="carousel-card"></div>
+        <div class="carousel-card active"></div>
+        <div class="carousel-card"></div>
       </div>
     </div>
   </div>
 
   <script>
-    const headerBg = document.getElementById("a");
-    const header = document.getElementById("b");
+    const headerBg = document.getElementById("header-bg");
+    const header = document.getElementById("header");
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 30) {
-        headerBg.classList.add("s");
-        header.classList.add("s");
+        headerBg.classList.add("shrink");
+        header.classList.add("shrink");
       } else {
-        headerBg.classList.remove("s");
-        header.classList.remove("s");
+        headerBg.classList.remove("shrink");
+        header.classList.remove("shrink");
       }
     });
 
-    const carousel = document.querySelector(".o");
-    const track = document.querySelector(".p");
+    const carousel = document.querySelector(".carousel");
+    const track = document.querySelector(".carousel-track");
     const cards = Array.from(track.children);
-    const dots = document.querySelectorAll(".n");
+    const dots = document.querySelectorAll(".dot");
 
     let current = 1;
     function updateCarousel() {
       cards.forEach((card, index) => {
-        card.classList.toggle("r", index === current);
+        card.classList.toggle("active", index === current);
       });
       dots.forEach((dot, index) => {
-        dot.classList.toggle("r", index === current);
+        dot.classList.toggle("active", index === current);
       });
       track.style.transform = `translateY(${-140 * (current - 1)}px)`;
     }
@@ -383,22 +383,22 @@
 
     updateCarousel();
 
-const container = document.getElementById("g");
-const menu = document.getElementById("h");
+const container = document.getElementById("menu-container");
+const menu = document.getElementById("nav-menu");
 
 let isHovered = false;
 let isFixed = false;
 
 container.addEventListener("mouseover", () => {
   if (!isFixed) {
-    menu.classList.add("t");
+    menu.classList.add("hover");
   }
   isHovered = true;
 });
 
 container.addEventListener("mouseleave", () => {
   if (!isFixed) {
-    menu.classList.remove("t");
+    menu.classList.remove("hover");
   }
   isHovered = false;
 });
@@ -408,32 +408,32 @@ let isClicked = 0;
 container.addEventListener("click", () => {
   if (isClicked %2 === 0) {
     isFixed = true;
-    menu.classList.add("t");
+    menu.classList.add("hover");
     isClicked++;
   }
   else {
     isFixed = false;
-    menu.classList.remove("t");
+    menu.classList.remove("hover");
     isClicked++;
   }
 });
 
-const searchContainer = document.getElementById("d");
-const searchMenu = document.getElementById("f");
+const searchContainer = document.getElementById("search-container");
+const searchMenu = document.getElementById("search-bar");
 
 let searchIsHovered = false;
 let searchIsFixed = false;
 
 searchContainer.addEventListener("mouseover", () => {
   if (!searchIsFixed) {
-    searchMenu.classList.add("t");
+    searchMenu.classList.add("hover");
   }
   searchIsHovered = true;
 });
 
 searchContainer.addEventListener("mouseleave", () => {
   if (!searchIsFixed) {
-    searchMenu.classList.remove("t");
+    searchMenu.classList.remove("hover");
   }
   searchIsHovered = false;
 });
@@ -443,12 +443,12 @@ let searchIsClicked = 0;
 searchContainer.addEventListener("click", () => {
   if (searchIsClicked %2 === 0) {
     searchIsFixed = true;
-    searchMenu.classList.add("t");
+    searchMenu.classList.add("hover");
     searchIsClicked++;
   }
   else {
     searchIsFixed = false;
-    searchMenu.classList.remove("t");
+    searchMenu.classList.remove("hover");
     searchIsClicked++;
   }
 });
